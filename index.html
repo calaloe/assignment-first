@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment First</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Assignment First</h1>
+            <p class="subtitle">Prioritize your assignments — start with what matters most</p>
+        </header>
+
+        <main>
+            <!-- Add Assignment Form Section -->
+            <section class="form-section">
+                <h2>Add an Assignment</h2>
+                <form id="assignmentForm">
+                    <div class="form-group">
+                        <label for="assignmentName">Assignment Name *</label>
+                        <input 
+                            type="text" 
+                            id="assignmentName" 
+                            placeholder="e.g., History Essay"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dueDate">Due Date *</label>
+                        <input 
+                            type="date" 
+                            id="dueDate"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty">Difficulty *</label>
+                        <select id="difficulty" required>
+                            <option value="">-- Select Difficulty --</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workAmount">Amount of Work *</label>
+                        <select id="workAmount" required>
+                            <option value="">-- Select Amount --</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Assignment</button>
+                </form>
+
+                <div id="errorMessage" class="error-message"></div>
+            </section>
+
+            <!-- Recommended Order Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>Recommended Order</h2>
+                <p class="info-text">Start with the assignment at the top. Assignments are ranked by deadline, difficulty, and amount of work.</p>
+                
+                <div id="assignmentsList" class="assignments-list"></div>
+            </section>
+
+            <!-- Empty State -->
+            <section class="empty-state" id="emptyState">
+                <p>No assignments yet. Add one above to get started!</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Assignment First • A simple tool to help you prioritize</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
